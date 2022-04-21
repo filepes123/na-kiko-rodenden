@@ -26,6 +26,7 @@ function App() {
       <Confetti
       width={width}
       height={height}
+      numberOfPieces={25}
     />
     </div>
   );
