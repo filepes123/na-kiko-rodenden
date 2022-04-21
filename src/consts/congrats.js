@@ -35,6 +35,11 @@ const chestitki = [
         audio: "audio/gabo.mp4"
     },
     {
+        ime: 'Venco',
+        slika: '/images/venco.jpg',
+        audio: "audio/venco.mp4"
+    },
+    {
         ime: 'Bachko',
         slika: '/images/bachko.jpg',
         audio: "audio/bachko.mp4"
@@ -42,7 +47,12 @@ const chestitki = [
     {
         ime: 'File',
         slika: '/images/file.jpg',
-        audio: "/"
+        audio: "/audio/file.mp4"
+    },
+    {
+        ime: 'Lasto Krokodilot',
+        slika: '/images/lasto.jpg',
+        audio: "audio/lasto.wav"
     },
 ]
 
