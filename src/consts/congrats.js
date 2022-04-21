@@ -30,6 +30,11 @@ const chestitki = [
         audio: "audio/jane.mp4"
     },
     {
+        ime: 'Gabo',
+        slika: '/images/gabo.jpg',
+        audio: "audio/gabo.mp4"
+    },
+    {
         ime: 'Bachko',
         slika: '/images/bachko.jpg',
         audio: "audio/bachko.mp4"

@@ -1,7 +1,11 @@
 import "./App.css";
 import chestitki from "./consts/congrats";
 import { Card, Button } from "react-bootstrap";
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
+
 function App() {
+  const { width, height } = useWindowSize()
   const handleAudio = (zvuk) =>{
     const audio = new Audio(zvuk)
     audio.play();
@@ -19,6 +23,10 @@ function App() {
           </Card>
         ))}
       </div>
+      <Confetti
+      width={width}
+      height={height}
+    />
     </div>
   );
 }
