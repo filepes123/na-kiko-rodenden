@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import chestitki from "./consts/congrats";
+import { Card, Button } from "react-bootstrap";
 function App() {
+  const handleAudio = (zvuk) =>{
+    const audio = new Audio(zvuk)
+    audio.play();
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="cards">
+        {chestitki.map((data) => (
+          <Card className="card" style={{ width: "18rem" }}>
+            <Card.Img className="card-img" variant="top" src={data.slika} />
+            <Card.Body className="card-body">
+              <Card.Title>{data.ime}</Card.Title>
+              <Button onClick={()=> handleAudio(data.audio)}variant="primary">Chestitka</Button>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }
