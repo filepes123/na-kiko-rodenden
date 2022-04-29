@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import "./App.css";
 import chestitki from "./consts/congrats";
 import { Card, Button } from "react-bootstrap";
@@ -7,33 +7,33 @@ import Confetti from "react-confetti";
 
 function App() {
   const { width, height } = useWindowSize();
-  const [playing, setPlaying] = useState(false);
   const [start, setStart] = useState(false);
   const audio = useMemo(() => {
     const audio1 = new Audio("audio/uck");
     return audio1;
   }, []);
 
-  useEffect(() => {
-    if (!playing && start) {
+  const handleBackgroundAudio = (control) =>{
+    setStart(true);
+    if(control){
       audio.play();
-    } else {
+    }else{
       audio.pause();
     }
-  }, [playing, start, audio]);
+  }
   const handleAudio = (zvuk) => {
     const audio = new Audio(zvuk);
-    setPlaying(true);
+    handleBackgroundAudio(false)
     audio.play();
     audio.onended = function () {
-      setPlaying(false);
+      handleBackgroundAudio(true)
     };
   };
   return (
     <div className="wrapper">
       <div className="cards">
         {!start ? (
-          <Button onClick={() => setStart(true)} size="lg" variant="primary">
+          <Button onClick={() => handleBackgroundAudio(true)} size="lg" variant="primary">
             STISNI
           </Button>
         ) : (
