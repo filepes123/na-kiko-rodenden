@@ -25,9 +25,24 @@ const chestitki = [
         audio: "audio/pandushka.mp4"
     },
     {
+        ime: 'Sara',
+        slika: '/images/sara.jpg',
+        audio: "audio/sara.mp4"
+    },
+    {
+        ime: 'Bube',
+        slika: '/images/mimi.jpg',
+        audio: "audio/mimi.mp4"
+    },
+    {
         ime: 'Jane',
         slika: '/images/jane.jpg',
         audio: "audio/jane.mp4"
+    },
+    {
+        ime: 'Zhan',
+        slika: '/images/zan.jpg',
+        audio: "audio/zan.mp4"
     },
     {
         ime: 'Gabo',
