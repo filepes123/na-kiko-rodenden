@@ -9,7 +9,7 @@ function App() {
   const { width, height } = useWindowSize();
   const [start, setStart] = useState(false);
   const audio = useMemo(() => {
-    const audio1 = new Audio("audio/uck");
+    const audio1 = new Audio("audio/uck.mp4");
     return audio1;
   }, []);
 
