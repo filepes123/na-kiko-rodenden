@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     if(!playing){
-      // audio.play();
+      audio.play();
     }else{
       audio.pause();
     }
